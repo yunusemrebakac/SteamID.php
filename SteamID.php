@@ -613,7 +613,7 @@ class SteamID
 	 * 
 	 * @return void
 	 */
-	private function Set( int $BitOffset, $ValueMask, $Value ) : void
+	private function Set( int $BitOffset, $ValueMask, $Value )
 	{
 		$this->Data = gmp_or(
 			gmp_and( $this->Data, gmp_com( self::ShiftLeft( $ValueMask, $BitOffset ) ) ),
